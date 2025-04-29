@@ -1,0 +1,21 @@
+// This file contains any additional CSS resets beyond what Tailwind provides
+// Tailwind already includes normalize.css, so we only need minimal resets here
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}

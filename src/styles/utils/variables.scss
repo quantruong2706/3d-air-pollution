@@ -1,0 +1,13 @@
+// Variables for consistent styling across the application
+// These can be used alongside Tailwind's variables
+
+:root {
+  // App-specific variables that aren't covered by Tailwind
+  --header-height: 64px;
+  --footer-height: 60px;
+  --sidebar-width: 250px;
+  --z-header: 100;
+  --z-sidebar: 90;
+  --z-modal: 1000;
+  --z-tooltip: 1050;
+}

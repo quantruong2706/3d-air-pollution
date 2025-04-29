@@ -1,0 +1,16 @@
+// Container layout styles
+.container-fluid {
+  width: 100%;
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.section {
+  padding: 2rem 0;
+
+  @media (min-width: 768px) {
+    padding: 4rem 0;
+  }
+}

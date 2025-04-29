@@ -1,0 +1,15 @@
+// Default theme styles
+// You can define additional theme variables here that extend Tailwind's theme
+
+:root {
+  // Theme-specific variables
+  --primary-color: #3b82f6;
+  --secondary-color: #10b981;
+  --accent-color: #8b5cf6;
+  --text-color: #1f2937;
+  --background-color: #f9fafb;
+
+  // For dark mode implementation (can be toggled via JavaScript)
+  --dark-text-color: #f9fafb;
+  --dark-background-color: #111827;
+}
