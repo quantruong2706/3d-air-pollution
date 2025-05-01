@@ -1,17 +1,17 @@
 // Import base styles
-@import './base/reset';
-@import './base/typography';
+@use './base/reset';
+@use './base/typography';
 
 // Import layout styles
-@import './layouts/container';
+@use './layouts/container';
 
 // Import component styles
-// @import './components/button';
-// @import './components/card';
+// @use './components/button';
+// @use './components/card';
 
 // Import utility styles
-@import './utils/mixins';
-@import './utils/variables';
+@use './utils/mixins';
+@use './utils/variables';
 
 // Import theme styles
-@import './themes/default';
+@use './themes/default';

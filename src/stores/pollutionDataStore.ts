@@ -1,4 +1,5 @@
 import { create } from 'zustand';
+import Logger from '@/lib/logger';
 
 // Define types for our pollution data
 export interface PollutionDataPoint {
@@ -107,6 +108,7 @@ export const usePollutionStore = create<PollutionDataState>(set => ({
   clearError: () => set({ error: null }),
 
   fetchPollutionData: async () => {
+    Logger.info('Fetching pollution data');
     set({ isLoading: true, error: null });
 
     // Simulate API request with a delay
@@ -117,15 +119,17 @@ export const usePollutionStore = create<PollutionDataState>(set => ({
       // Uncomment to simulate an error occasionally for testing
       // if (Math.random() > 0.7) throw new Error("Network connection failed");
 
+      Logger.debug('Pollution data loaded successfully', { count: sampleData.length });
       set({
         pollutionData: sampleData,
         isLoading: false,
       });
     } catch (error) {
-      console.error('Error fetching pollution data:', error);
+      const errorMessage = error instanceof Error ? error.message : 'An unknown error occurred';
+      Logger.error('Error fetching pollution data:', errorMessage);
       set({
         isLoading: false,
-        error: error instanceof Error ? error.message : 'An unknown error occurred',
+        error: errorMessage,
       });
     }
   },
