@@ -5,7 +5,7 @@ import './styles/main.scss';
 // Import layouts and pages
 import RootLayout from './layouts/RootLayout';
 import HomePage from './pages/Home';
-import AboutPage from './pages/About';
+import AboutPage from './pages/AirPollutionMap';
 import NotFoundPage from './pages/NotFound';
 
 // Create router configuration
