@@ -64,18 +64,54 @@ yarn preview
 
 ```
 3d-air-pollution-map/
+├── public/               # Public assets
 ├── src/                  # Source code
 │   ├── assets/           # Static assets
-│   ├── components/       # Reusable UI components
+│   ├── components/       # UI components
+│   │   ├── common/       # Common reusable components
+│   │   ├── features/     # Feature-specific components
 │   │   └── ui/           # shadcn/ui components
+│   ├── constants/        # Application constants
 │   ├── layouts/          # Layout components
 │   ├── lib/              # Utility functions and helpers
+│   │   ├── contexts/     # React contexts
+│   │   ├── db/           # Database related code
+│   │   └── hooks/        # Custom React hooks
 │   ├── pages/            # Page components
 │   ├── stores/           # Zustand state stores
-│   └── styles/           # SCSS stylesheets
-├── public/               # Public assets
+│   ├── styles/           # SCSS stylesheets
+│   │   ├── base/         # Base styles
+│   │   ├── layouts/      # Layout styles
+│   │   ├── themes/       # Theme-related styles
+│   │   └── utils/        # Style utilities
+│   ├── tests/            # Test files
+│   ├── types/            # TypeScript type definitions
+│   └── utils/            # Utility functions
+├── components.json       # shadcn/ui components configuration
 ├── index.html            # HTML entry point
-└── package.json          # Project dependencies
+├── package.json          # Project dependencies
+├── tailwind.config.js    # Tailwind CSS configuration
+└── vite.config.ts        # Vite configuration
+```
+
+## Testing
+
+This project uses:
+
+- Vitest for unit and component testing
+- React Testing Library for component tests
+
+Run tests with:
+
+```bash
+# Run all tests
+yarn test
+
+# Run tests in watch mode
+yarn test:watch
+
+# Generate test coverage report
+yarn test:coverage
 ```
 
 ## Code Quality
@@ -84,6 +120,7 @@ This project uses:
 
 - ESLint for code linting
 - Prettier for code formatting
+- TypeScript for type checking
 - Husky for git hooks
 - lint-staged for running linters on git staged files
 
