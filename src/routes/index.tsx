@@ -5,8 +5,8 @@ import { ROUTES } from '../constants/routes/paths';
 import RootLayout from '../layouts/RootLayout';
 
 // Pages
-import Home from '../pages/Home';
-import AirPollutionMap from '../pages/AirPollutionMap';
+import Dashboard from '../pages/Dashboard';
+import AirPollutionMap from '../pages/VisualizationPage';
 import NotFound from '../pages/NotFound';
 
 /**
@@ -14,12 +14,12 @@ import NotFound from '../pages/NotFound';
  */
 const router = createBrowserRouter([
   {
-    path: ROUTES.HOME,
+    path: ROUTES.DASHBOARD,
     element: <RootLayout />,
     children: [
       {
-        path: ROUTES.HOME,
-        element: <Home />,
+        path: ROUTES.DASHBOARD,
+        element: <Dashboard />,
       },
       {
         path: ROUTES.AIR_POLLUTION_MAP,
