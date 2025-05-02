@@ -1,0 +1,1030 @@
+{
+  "pollutionData": [
+    {
+      "id": "15",
+      "location": {
+        "name": "Ha Noi",
+        "key": "Ha_Noi",
+        "lat": 21.0285,
+        "lng": 105.8542
+      },
+      "readings": {
+        "pm25": 42.4,
+        "pm10": 65.1,
+        "no2": 37.2,
+        "o3": 28.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "46",
+      "location": {
+        "name": "Ho Chi Minh",
+        "key": "Ho_Chi_Minh",
+        "lat": 10.8231,
+        "lng": 106.6297
+      },
+      "readings": {
+        "pm25": 35.8,
+        "pm10": 53.3,
+        "no2": 45.9,
+        "o3": 32.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "40",
+      "location": {
+        "name": "Da Nang",
+        "key": "Da_Nang",
+        "lat": 16.0544,
+        "lng": 108.2022
+      },
+      "readings": {
+        "pm25": 28.3,
+        "pm10": 42.5,
+        "no2": 22.7,
+        "o3": 35.4,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "13",
+      "location": {
+        "name": "Hai Phong",
+        "key": "Hai_Phong",
+        "lat": 20.8449,
+        "lng": 106.6881
+      },
+      "readings": {
+        "pm25": 38.7,
+        "pm10": 58.2,
+        "no2": 29.3,
+        "o3": 26.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "50",
+      "location": {
+        "name": "Can Tho",
+        "key": "Can_Tho",
+        "lat": 10.0452,
+        "lng": 105.7469
+      },
+      "readings": {
+        "pm25": 32.1,
+        "pm10": 47.6,
+        "no2": 24.8,
+        "o3": 30.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "28",
+      "location": {
+        "name": "Khanh Hoa",
+        "key": "Khanh_Hoa",
+        "lat": 12.2388,
+        "lng": 109.1967
+      },
+      "readings": {
+        "pm25": 24.5,
+        "pm10": 38.9,
+        "no2": 18.6,
+        "o3": 43.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "39",
+      "location": {
+        "name": "Thua Thien Hue",
+        "key": "Thua_Thien_Hue",
+        "lat": 16.4637,
+        "lng": 107.5908
+      },
+      "readings": {
+        "pm25": 26.8,
+        "pm10": 40.3,
+        "no2": 21.4,
+        "o3": 38.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "0",
+      "location": {
+        "name": "Quang Ninh",
+        "key": "Quang_Ninh",
+        "lat": 20.9591,
+        "lng": 107.0956
+      },
+      "readings": {
+        "pm25": 31.6,
+        "pm10": 48.2,
+        "no2": 25.9,
+        "o3": 29.4,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "59",
+      "location": {
+        "name": "Dak Lak",
+        "key": "Dak_Lak",
+        "lat": 12.6746,
+        "lng": 108.0381
+      },
+      "readings": {
+        "pm25": 23.1,
+        "pm10": 36.7,
+        "no2": 17.5,
+        "o3": 40.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "25",
+      "location": {
+        "name": "Nghe An",
+        "key": "Nghe_An",
+        "lat": 18.6734,
+        "lng": 105.6815
+      },
+      "readings": {
+        "pm25": 29.4,
+        "pm10": 44.1,
+        "no2": 23.8,
+        "o3": 32.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "43",
+      "location": {
+        "name": "Dong Nai",
+        "key": "Dong_Nai",
+        "lat": 10.9508,
+        "lng": 106.8221
+      },
+      "readings": {
+        "pm25": 39.2,
+        "pm10": 59.7,
+        "no2": 42.3,
+        "o3": 33.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "41",
+      "location": {
+        "name": "Ba Ria Vung Tau",
+        "key": "Vung_Tau",
+        "lat": 10.3493,
+        "lng": 107.0826
+      },
+      "readings": {
+        "pm25": 21.5,
+        "pm10": 33.6,
+        "no2": 19.1,
+        "o3": 45.3,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "4",
+      "location": {
+        "name": "Thai Nguyen",
+        "key": "Thai_Nguyen",
+        "lat": 21.5942,
+        "lng": 105.8482
+      },
+      "readings": {
+        "pm25": 33.7,
+        "pm10": 51.2,
+        "no2": 28.5,
+        "o3": 31.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "16",
+      "location": {
+        "name": "Bac Ninh",
+        "key": "Bac_Ninh",
+        "lat": 21.1861,
+        "lng": 106.0763
+      },
+      "readings": {
+        "pm25": 36.8,
+        "pm10": 55.4,
+        "no2": 32.1,
+        "o3": 29.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "23",
+      "location": {
+        "name": "Thai Binh",
+        "key": "Thai_Binh",
+        "lat": 20.4478,
+        "lng": 106.3315
+      },
+      "readings": {
+        "pm25": 29.1,
+        "pm10": 45.8,
+        "no2": 25.3,
+        "o3": 31.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "20",
+      "location": {
+        "name": "Nam Dinh",
+        "key": "Nam_Dinh",
+        "lat": 20.4138,
+        "lng": 106.1682
+      },
+      "readings": {
+        "pm25": 31.2,
+        "pm10": 48.3,
+        "no2": 26.9,
+        "o3": 30.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "37",
+      "location": {
+        "name": "Quang Ngai",
+        "key": "Quang_Ngai",
+        "lat": 15.1213,
+        "lng": 108.8038
+      },
+      "readings": {
+        "pm25": 26.3,
+        "pm10": 40.7,
+        "no2": 19.5,
+        "o3": 38.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "34",
+      "location": {
+        "name": "Binh Dinh",
+        "key": "Binh_Dinh",
+        "lat": 13.7765,
+        "lng": 109.2239
+      },
+      "readings": {
+        "pm25": 25.7,
+        "pm10": 39.9,
+        "no2": 18.3,
+        "o3": 39.6,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "52",
+      "location": {
+        "name": "Ca Mau",
+        "key": "Ca_Mau",
+        "lat": 9.1765,
+        "lng": 105.1525
+      },
+      "readings": {
+        "pm25": 27.3,
+        "pm10": 41.8,
+        "no2": 20.6,
+        "o3": 36.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "44",
+      "location": {
+        "name": "An Giang",
+        "key": "An_Giang",
+        "lat": 10.3865,
+        "lng": 105.4359
+      },
+      "readings": {
+        "pm25": 29.8,
+        "pm10": 44.3,
+        "no2": 22.7,
+        "o3": 34.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "47",
+      "location": {
+        "name": "Kien Giang",
+        "key": "Kien_Giang",
+        "lat": 10.0125,
+        "lng": 105.0809
+      },
+      "readings": {
+        "pm25": 28.6,
+        "pm10": 42.9,
+        "no2": 21.8,
+        "o3": 35.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "42",
+      "location": {
+        "name": "Binh Thuan",
+        "key": "Binh_Thuan",
+        "lat": 10.9296,
+        "lng": 108.1011
+      },
+      "readings": {
+        "pm25": 23.4,
+        "pm10": 37.2,
+        "no2": 16.9,
+        "o3": 42.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "27",
+      "location": {
+        "name": "Gia Lai",
+        "key": "Gia_Lai",
+        "lat": 13.9833,
+        "lng": 108.0167
+      },
+      "readings": {
+        "pm25": 22.8,
+        "pm10": 36.1,
+        "no2": 16.3,
+        "o3": 41.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "35",
+      "location": {
+        "name": "Kon Tum",
+        "key": "Kon_Tum",
+        "lat": 14.3544,
+        "lng": 108.0163
+      },
+      "readings": {
+        "pm25": 21.6,
+        "pm10": 34.7,
+        "no2": 15.8,
+        "o3": 43.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "53",
+      "location": {
+        "name": "Soc Trang",
+        "key": "Soc_Trang",
+        "lat": 9.6024,
+        "lng": 105.9744
+      },
+      "readings": {
+        "pm25": 30.1,
+        "pm10": 45.6,
+        "no2": 23.2,
+        "o3": 33.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "31",
+      "location": {
+        "name": "Phu Yen",
+        "key": "Phu_Yen",
+        "lat": 13.0956,
+        "lng": 109.3229
+      },
+      "readings": {
+        "pm25": 24.2,
+        "pm10": 38.5,
+        "no2": 17.9,
+        "o3": 40.3,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "22",
+      "location": {
+        "name": "Bac Giang",
+        "key": "Bac_Giang",
+        "lat": 21.2717,
+        "lng": 106.1947
+      },
+      "readings": {
+        "pm25": 34.9,
+        "pm10": 52.6,
+        "no2": 29.7,
+        "o3": 30.3,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "17",
+      "location": {
+        "name": "Vinh Phuc",
+        "key": "Vinh_Phuc",
+        "lat": 21.3609,
+        "lng": 105.5474
+      },
+      "readings": {
+        "pm25": 35.3,
+        "pm10": 53.1,
+        "no2": 30.2,
+        "o3": 29.6,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "30",
+      "location": {
+        "name": "Ninh Thuan",
+        "key": "Ninh_Thuan",
+        "lat": 11.5667,
+        "lng": 108.9833
+      },
+      "readings": {
+        "pm25": 22.1,
+        "pm10": 34.8,
+        "no2": 16.5,
+        "o3": 43.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "38",
+      "location": {
+        "name": "Quang Tri",
+        "key": "Quang_Tri",
+        "lat": 16.8163,
+        "lng": 107.1035
+      },
+      "readings": {
+        "pm25": 27.5,
+        "pm10": 41.2,
+        "no2": 20.8,
+        "o3": 37.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "56",
+      "location": {
+        "name": "Cao Bang",
+        "key": "Cao_Bang",
+        "lat": 22.6657,
+        "lng": 106.2569
+      },
+      "readings": {
+        "pm25": 25.9,
+        "pm10": 39.4,
+        "no2": 19.1,
+        "o3": 37.6,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "57",
+      "location": {
+        "name": "Ha Giang",
+        "key": "Ha_Giang",
+        "lat": 22.8233,
+        "lng": 104.9842
+      },
+      "readings": {
+        "pm25": 24.3,
+        "pm10": 37.8,
+        "no2": 18.4,
+        "o3": 39.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "5",
+      "location": {
+        "name": "Lao Cai",
+        "key": "Lao_Cai",
+        "lat": 22.4856,
+        "lng": 103.9757
+      },
+      "readings": {
+        "pm25": 26.7,
+        "pm10": 40.5,
+        "no2": 20.1,
+        "o3": 36.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "6",
+      "location": {
+        "name": "Lang Son",
+        "key": "Lang_Son",
+        "lat": 21.8531,
+        "lng": 106.7617
+      },
+      "readings": {
+        "pm25": 29.2,
+        "pm10": 43.8,
+        "no2": 23.5,
+        "o3": 33.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "1",
+      "location": {
+        "name": "Tay Ninh",
+        "key": "Tay_Ninh",
+        "lat": 11.3102,
+        "lng": 106.1076
+      },
+      "readings": {
+        "pm25": 31.5,
+        "pm10": 47.3,
+        "no2": 25.6,
+        "o3": 34.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "51",
+      "location": {
+        "name": "Bac Lieu",
+        "key": "Bac_Lieu",
+        "lat": 9.2941,
+        "lng": 105.7215
+      },
+      "readings": {
+        "pm25": 28.9,
+        "pm10": 43.4,
+        "no2": 22.3,
+        "o3": 35.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "60",
+      "location": {
+        "name": "Ben Tre",
+        "key": "Ben_Tre",
+        "lat": 10.2415,
+        "lng": 106.3795
+      },
+      "readings": {
+        "pm25": 29.7,
+        "pm10": 44.6,
+        "no2": 23.1,
+        "o3": 34.3,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "33",
+      "location": {
+        "name": "Binh Phuoc",
+        "key": "Binh_Phuoc",
+        "lat": 11.5418,
+        "lng": 106.9096
+      },
+      "readings": {
+        "pm25": 32.3,
+        "pm10": 48.7,
+        "no2": 26.8,
+        "o3": 33.6,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "45",
+      "location": {
+        "name": "Dong Thap",
+        "key": "Dong_Thap",
+        "lat": 10.4931,
+        "lng": 105.6277
+      },
+      "readings": {
+        "pm25": 30.5,
+        "pm10": 45.9,
+        "no2": 24.1,
+        "o3": 33.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "8",
+      "location": {
+        "name": "Thanh Hoa",
+        "key": "Thanh_Hoa",
+        "lat": 19.8066,
+        "lng": 105.7761
+      },
+      "readings": {
+        "pm25": 32.8,
+        "pm10": 49.2,
+        "no2": 27.3,
+        "o3": 32.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "9",
+      "location": {
+        "name": "Tuyen Quang",
+        "key": "Tuyen_Quang",
+        "lat": 21.8233,
+        "lng": 105.2181
+      },
+      "readings": {
+        "pm25": 27.1,
+        "pm10": 41.5,
+        "no2": 20.4,
+        "o3": 36.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "2",
+      "location": {
+        "name": "Lai Chau",
+        "key": "Lai_Chau",
+        "lat": 22.3964,
+        "lng": 103.4353
+      },
+      "readings": {
+        "pm25": 23.8,
+        "pm10": 37.1,
+        "no2": 17.2,
+        "o3": 39.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "7",
+      "location": {
+        "name": "Son La",
+        "key": "Son_La",
+        "lat": 21.3256,
+        "lng": 103.9066
+      },
+      "readings": {
+        "pm25": 25.3,
+        "pm10": 38.9,
+        "no2": 19.5,
+        "o3": 37.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "10",
+      "location": {
+        "name": "Yen Bai",
+        "key": "Yen_Bai",
+        "lat": 21.7226,
+        "lng": 104.9063
+      },
+      "readings": {
+        "pm25": 26.9,
+        "pm10": 40.8,
+        "no2": 20.7,
+        "o3": 36.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "3",
+      "location": {
+        "name": "Bac Kan",
+        "key": "Bac_Kan",
+        "lat": 22.1477,
+        "lng": 105.8347
+      },
+      "readings": {
+        "pm25": 25.6,
+        "pm10": 39.1,
+        "no2": 19.2,
+        "o3": 38.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "21",
+      "location": {
+        "name": "Phu Tho",
+        "key": "Phu_Tho",
+        "lat": 21.4136,
+        "lng": 105.2241
+      },
+      "readings": {
+        "pm25": 33.6,
+        "pm10": 50.4,
+        "no2": 28.4,
+        "o3": 31.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "14",
+      "location": {
+        "name": "Hung Yen",
+        "key": "Hung_Yen",
+        "lat": 20.6525,
+        "lng": 106.0514
+      },
+      "readings": {
+        "pm25": 37.2,
+        "pm10": 56.8,
+        "no2": 31.6,
+        "o3": 28.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "19",
+      "location": {
+        "name": "Ha Nam",
+        "key": "Ha_Nam",
+        "lat": 20.5375,
+        "lng": 105.9621
+      },
+      "readings": {
+        "pm25": 34.1,
+        "pm10": 51.5,
+        "no2": 28.9,
+        "o3": 31.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "18",
+      "location": {
+        "name": "Ninh Binh",
+        "key": "Ninh_Binh",
+        "lat": 20.2544,
+        "lng": 105.9751
+      },
+      "readings": {
+        "pm25": 31.9,
+        "pm10": 47.9,
+        "no2": 26.2,
+        "o3": 32.4,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "24",
+      "location": {
+        "name": "Ha Tinh",
+        "key": "Ha_Tinh",
+        "lat": 18.3329,
+        "lng": 105.9069
+      },
+      "readings": {
+        "pm25": 28.6,
+        "pm10": 43.1,
+        "no2": 22.9,
+        "o3": 35.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "26",
+      "location": {
+        "name": "Quang Binh",
+        "key": "Quang_Binh",
+        "lat": 17.4709,
+        "lng": 106.6203
+      },
+      "readings": {
+        "pm25": 27.8,
+        "pm10": 42.2,
+        "no2": 21.9,
+        "o3": 37.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "36",
+      "location": {
+        "name": "Quang Nam",
+        "key": "Quang_Nam",
+        "lat": 15.5753,
+        "lng": 108.4747
+      },
+      "readings": {
+        "pm25": 27.1,
+        "pm10": 40.9,
+        "no2": 21.3,
+        "o3": 36.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "32",
+      "location": {
+        "name": "Binh Duong",
+        "key": "Binh_Duong",
+        "lat": 11.3254,
+        "lng": 106.7747
+      },
+      "readings": {
+        "pm25": 37.5,
+        "pm10": 57.2,
+        "no2": 40.7,
+        "o3": 32.4,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "58",
+      "location": {
+        "name": "Dak Nong",
+        "key": "Dak_Nong",
+        "lat": 12.0064,
+        "lng": 107.6883
+      },
+      "readings": {
+        "pm25": 22.4,
+        "pm10": 35.8,
+        "no2": 16.7,
+        "o3": 41.7,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "29",
+      "location": {
+        "name": "Lam Dong",
+        "key": "Lam_Dong",
+        "lat": 11.9465,
+        "lng": 108.4419
+      },
+      "readings": {
+        "pm25": 23.9,
+        "pm10": 37.6,
+        "no2": 17.8,
+        "o3": 40.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "48",
+      "location": {
+        "name": "Long An",
+        "key": "Long_An",
+        "lat": 10.6068,
+        "lng": 106.2422
+      },
+      "readings": {
+        "pm25": 32.4,
+        "pm10": 49.1,
+        "no2": 27.1,
+        "o3": 33.2,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "49",
+      "location": {
+        "name": "Tien Giang",
+        "key": "Tien_Giang",
+        "lat": 10.4493,
+        "lng": 106.3422
+      },
+      "readings": {
+        "pm25": 31.7,
+        "pm10": 48.3,
+        "no2": 26.4,
+        "o3": 33.9,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "54",
+      "location": {
+        "name": "Tra Vinh",
+        "key": "Tra_Vinh",
+        "lat": 9.9342,
+        "lng": 106.3366
+      },
+      "readings": {
+        "pm25": 30.2,
+        "pm10": 46.5,
+        "no2": 24.3,
+        "o3": 34.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "55",
+      "location": {
+        "name": "Vinh Long",
+        "key": "Vinh_Long",
+        "lat": 10.2537,
+        "lng": 105.9722
+      },
+      "readings": {
+        "pm25": 31.0,
+        "pm10": 47.2,
+        "no2": 25.1,
+        "o3": 34.8,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "61",
+      "location": {
+        "name": "Hau Giang",
+        "key": "Hau_Giang",
+        "lat": 9.7873,
+        "lng": 105.6413
+      },
+      "readings": {
+        "pm25": 29.9,
+        "pm10": 45.3,
+        "no2": 23.7,
+        "o3": 35.3,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "12",
+      "location": {
+        "name": "Hai Duong",
+        "key": "Hai_Duong",
+        "lat": 20.9373,
+        "lng": 106.3307
+      },
+      "readings": {
+        "pm25": 35.5,
+        "pm10": 54.3,
+        "no2": 30.8,
+        "o3": 29.1,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    },
+    {
+      "id": "11",
+      "location": {
+        "name": "Hoa Binh",
+        "key": "Hoa_Binh",
+        "lat": 20.8134,
+        "lng": 105.3383
+      },
+      "readings": {
+        "pm25": 28.3,
+        "pm10": 42.9,
+        "no2": 22.5,
+        "o3": 35.5,
+        "timestamp": "2025-05-01T10:30:00Z"
+      }
+    }
+  ],
+  "thresholds": {
+    "pm25": {
+      "good": 12,
+      "moderate": 35.5,
+      "sensitive": 55.5,
+      "unhealthy": 150.5,
+      "veryUnhealthy": 250.5,
+      "hazardous": 500
+    },
+    "pm10": {
+      "good": 55,
+      "moderate": 155,
+      "sensitive": 255,
+      "unhealthy": 355,
+      "veryUnhealthy": 425,
+      "hazardous": 605
+    },
+    "no2": {
+      "good": 54,
+      "moderate": 101,
+      "sensitive": 361,
+      "unhealthy": 650,
+      "veryUnhealthy": 1250,
+      "hazardous": 2050
+    },
+    "o3": {
+      "good": 55,
+      "moderate": 71,
+      "sensitive": 86,
+      "unhealthy": 106,
+      "veryUnhealthy": 201,
+      "hazardous": 751
+    }
+  }
+}

@@ -4,7 +4,7 @@
  */
 
 export const ROUTES = {
-  HOME: '/',
+  DASHBOARD: '/',
   AIR_POLLUTION_MAP: '/air-pollution-map',
   NOT_FOUND: '*',
 } as const;
