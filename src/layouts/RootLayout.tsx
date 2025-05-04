@@ -2,7 +2,6 @@ import { Outlet } from 'react-router-dom';
 import { useAppStore } from '@/stores/appStore';
 import { useEffect } from 'react';
 import Header from './Header';
-import Footer from './Footer';
 
 const RootLayout = () => {
   const { isDarkMode } = useAppStore();
@@ -22,8 +21,6 @@ const RootLayout = () => {
       <main className="flex-grow">
         <Outlet />
       </main>
-
-      <Footer />
     </div>
   );
 };

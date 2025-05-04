@@ -1,9 +1,10 @@
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { PollutionType, usePollutionStore } from '@/stores/pollutionDataStore';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { usePollutionStore } from '@/stores/pollutionDataStore';
 import { useAnimateIn } from '@/lib/hooks/useAnimateIn';
 import { pollutionTypes } from '@/constants/aqi';
+import { PollutionType } from '@/types/3dVisualization';
 
-export function AirPollutionTypeFilter(): JSX.Element {
+const AirPollutionTypeFilter = (): JSX.Element => {
   const activeLayer = usePollutionStore(state => state.activeLayer);
   const setActiveLayer = usePollutionStore(state => state.setActiveLayer);
 
@@ -25,7 +26,6 @@ export function AirPollutionTypeFilter(): JSX.Element {
     >
       <CardHeader className="flex flex-col items-center">
         <CardTitle>AIR POLLUTION</CardTitle>
-        <CardDescription>Filter according to polluted gas</CardDescription>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-4 gap-2">
@@ -46,4 +46,6 @@ export function AirPollutionTypeFilter(): JSX.Element {
       </CardContent>
     </Card>
   );
-}
+};
+
+export default AirPollutionTypeFilter;
