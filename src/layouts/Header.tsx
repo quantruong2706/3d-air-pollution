@@ -19,9 +19,9 @@ const Header = () => {
         </div>
         <nav className="flex gap-4">
           <Link
-            to={ROUTES.HOME}
+            to={ROUTES.DASHBOARD}
             className={`text-sm ${
-              isActive(ROUTES.HOME)
+              isActive(ROUTES.DASHBOARD)
                 ? 'text-foreground font-medium'
                 : 'text-muted-foreground hover:text-foreground'
             }`}
