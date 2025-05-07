@@ -8,6 +8,7 @@ import RootLayout from '../layouts/RootLayout';
 import Dashboard from '../pages/Dashboard';
 import AirPollutionMap from '../pages/VisualizationPage';
 import NotFound from '../pages/NotFound';
+import MapBoxFactory from '@/pages/MapBoxFactory';
 
 /**
  * Application router configuration
@@ -20,6 +21,10 @@ const router = createBrowserRouter([
       {
         path: ROUTES.DASHBOARD,
         element: <Dashboard />,
+      },
+      {
+        path: ROUTES.MAP_BOX_FACTORY,
+        element: <MapBoxFactory />,
       },
       {
         path: ROUTES.AIR_POLLUTION_MAP,

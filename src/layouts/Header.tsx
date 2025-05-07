@@ -29,6 +29,16 @@ const Header = () => {
             Dashboard
           </Link>
           <Link
+            to={ROUTES.MAP_BOX_FACTORY}
+            className={`text-sm ${
+              isActive(ROUTES.MAP_BOX_FACTORY)
+                ? 'text-foreground font-medium'
+                : 'text-muted-foreground hover:text-foreground'
+            }`}
+          >
+            Factory
+          </Link>
+          <Link
             to={ROUTES.AIR_POLLUTION_MAP}
             className={`text-sm ${
               isActive(ROUTES.AIR_POLLUTION_MAP)

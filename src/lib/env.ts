@@ -16,7 +16,7 @@ export interface EnvironmentConfig {
   readonly API_KEY: string;
   readonly ENV: EnvironmentType;
   readonly ENABLE_LOGGING: boolean;
-  readonly MAP_PROVIDER: string;
+  readonly MAP_BOX_TOKEN: string;
   readonly DATA_SOURCE: string;
 }
 
@@ -77,7 +77,7 @@ export const loadEnvironment = (): EnvironmentConfig => {
       API_KEY: getRequiredEnvVar('API_KEY'),
       ENV: parseEnvironmentType(getRequiredEnvVar('ENV')),
       ENABLE_LOGGING: parseBoolean(getOptionalEnvVar('ENABLE_LOGGING', 'false')),
-      MAP_PROVIDER: getOptionalEnvVar('MAP_PROVIDER', 'default'),
+      MAP_BOX_TOKEN: getRequiredEnvVar('MAP_BOX_TOKEN'),
       DATA_SOURCE: getOptionalEnvVar('DATA_SOURCE', 'local'),
     };
   } catch (error) {
