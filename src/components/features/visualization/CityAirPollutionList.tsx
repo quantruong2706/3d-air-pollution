@@ -4,6 +4,7 @@ import { usePollutionStore } from '@/stores/pollutionDataStore';
 import { useAnimateIn } from '@/lib/hooks/useAnimateIn';
 import { CitiesTable } from './CitiesTable';
 import { SortOption } from '@/types/CitiesTableTypes';
+import LoadingSpinner from '@/components/common/LoadingSpinner';
 
 const CityAirPollutionList: React.FC = () => {
   const [sortBy, setSortBy] = useState<SortOption>('name');
@@ -44,7 +45,9 @@ const CityAirPollutionList: React.FC = () => {
       </CardHeader>
       <CardContent className="overflow-auto max-h-[calc(80vh-4rem)]">
         {isLoading ? (
-          <div className="p-4 text-center">Loading cities data...</div>
+          <div className="flex justify-center py-6">
+            <LoadingSpinner text="Loading cities data..." size="small" variant="dark" />
+          </div>
         ) : error ? (
           <div className="p-4 text-center text-red-500">Error loading data: {error}</div>
         ) : (
