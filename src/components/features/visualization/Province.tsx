@@ -3,7 +3,6 @@ import { useFrame } from '@react-three/fiber';
 import { useRef, useState } from 'react';
 import * as THREE from 'three';
 import TextGenerate from './TextGenerate';
-import { PollutionDataPoint, PollutionType } from '@/stores/pollutionDataStore';
 import { useFilterStore } from '@/stores/filterStore';
 import { useCursorPointer } from '@/lib/hooks/useCursorPointer';
 import { formatProvinceName, getAQIValue, getAQIRating } from '@/utils/mapHelpers';
@@ -17,6 +16,7 @@ import {
   POLLUTION_DATA_POSITION,
   PROVINCE_NAME_POSITION,
 } from '@/constants/province';
+import { PollutionDataPoint, PollutionType } from '@/types/3dVisualization';
 
 interface ProvinceProps {
   name: string;
