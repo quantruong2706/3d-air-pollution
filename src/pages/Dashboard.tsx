@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { PollutionType, usePollutionStore } from '@/stores/pollutionDataStore';
+import { usePollutionStore } from '@/stores/pollutionDataStore';
 import Logger from '@/lib/logger';
+import { PollutionType } from '@/types/3dVisualization';
+import LoadingSpinner from '@/components/common/LoadingSpinner';
 
 interface PollutionStats {
   pm25: { min: number; max: number; avg: number };
@@ -120,7 +122,9 @@ const Dashboard: React.FC = () => {
     return (
       <div className="container mx-auto px-4 py-8">
         <h1 className="text-2xl font-bold mb-4">Air Pollution Dashboard</h1>
-        <div className="p-4 bg-slate-100 rounded">Loading data...</div>
+        <div className="flex justify-center">
+          <LoadingSpinner text="Loading dashboard data..." size="medium" variant="dark" />
+        </div>
       </div>
     );
   }

@@ -1,8 +1,8 @@
 import { JSX } from 'react';
 import * as THREE from 'three';
-import { PollutionDataPoint, PollutionType } from '@/stores/pollutionDataStore';
 import Province from './Province';
 import { getProvinceColor, getProvinceData } from '@/utils/mapHelpers';
+import { PollutionDataPoint, PollutionType } from '@/types/3dVisualization';
 
 interface ProvinceRendererProps {
   scene: THREE.Group;

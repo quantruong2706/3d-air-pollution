@@ -1,4 +1,4 @@
-import { PollutionType } from '@/stores/pollutionDataStore';
+import { PollutionType } from '@/types/3dVisualization';
 
 // AQI Rating Text Values
 export const AQI_RATINGS = {

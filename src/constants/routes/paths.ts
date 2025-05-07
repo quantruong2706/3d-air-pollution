@@ -5,6 +5,7 @@
 
 export const ROUTES = {
   DASHBOARD: '/',
+  MAP_BOX_FACTORY: '/map-box-factory',
   AIR_POLLUTION_MAP: '/air-pollution-map',
   NOT_FOUND: '*',
 } as const;
