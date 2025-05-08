@@ -118,3 +118,12 @@ export const getPollutionColorClass = (value: number, type: PollutionType): stri
 export const isCityActive = (locationName: string, activeMesh: string | null): boolean => {
   return activeMesh === locationName;
 };
+
+/**
+ * Get button styling class based on whether the button is currently active
+ * @param isActive Whether the button is currently active
+ * @returns CSS class string for button styling
+ */
+export const getButtonStyleClass = (isActive: boolean): string => {
+  return isActive ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
+};

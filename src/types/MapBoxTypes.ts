@@ -1,12 +1,4 @@
-/**
- * MapBox style options
- */
-export const MAPBOX_STYLES = {
-  LIGHT: 'mapbox://styles/mapbox/light-v11',
-  DARK: 'mapbox://styles/mapbox/dark-v11',
-  STREETS: 'mapbox://styles/mapbox/streets-v12',
-  SATELLITE: 'mapbox://styles/mapbox/satellite-streets-v12',
-} as const;
+import { MAPBOX_STYLES } from '@/constants/mapStyles';
 
 export interface IFactoryItem {
   id: string;
