@@ -1,4 +1,5 @@
 export type PollutionType = 'pm25' | 'pm10' | 'no2' | 'o3';
+export type QualityLevel = 'good' | 'moderate' | 'poor' | 'veryPoor' | 'hazardous';
 
 export interface PollutionDataPoint {
   id: string;

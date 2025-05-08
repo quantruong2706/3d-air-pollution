@@ -1,17 +1,32 @@
 // Import base styles
-@use './base/reset';
-@use './base/typography';
+@import './base/reset';
+@import './base/typography';
 
 // Import layout styles
-@use './layouts/container';
+@import './layouts/container';
+@import './layouts/dashboard';
 
 // Import component styles
 // @use './components/button';
 // @use './components/card';
 
 // Import utility styles
-@use './utils/mixins';
-@use './utils/variables';
+@import './utils/mixins';
+@import './utils/variables';
+@import './utils/scrollbar';
 
 // Import theme styles
-@use './themes/default';
+@import './themes/default';
+
+// Additional global styles
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-rgb: 17, 24, 39;
+  }
+}

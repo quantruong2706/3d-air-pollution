@@ -54,8 +54,8 @@ const MapBoxFactory: React.FC = () => {
       <MapStyle currentMapStyle={currentMapStyle} onStyleChange={changeMapStyle} />
 
       {!modelLoaded && (
-        <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 z-10">
-          <LoadingSpinner text="Loading 3D Factory model..." size="large" variant="light" />
+        <div className="absolute inset-0 flex items-center justify-center z-10">
+          <LoadingSpinner text="Loading dashboard data..." size="medium" variant="dark" />
         </div>
       )}
 

@@ -14,7 +14,9 @@ const Header = () => {
       <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="text-lg font-bold text-foreground">
-            Air Pollution
+            <h1 className="text-3xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 text-transparent bg-clip-text">
+              Air Pollution
+            </h1>
           </Link>
         </div>
         <nav className="flex gap-4">

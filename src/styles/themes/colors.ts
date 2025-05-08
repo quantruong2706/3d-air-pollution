@@ -1,9 +1,10 @@
-/**
- * Color palette definitions for the 3D Air Pollution Visualization project
- * All color codes used throughout the application should be defined here
- */
-
-import { PollutionType } from '@/stores/pollutionDataStore';
+export const colorMap = {
+  good: '#4ADE80', // Green
+  moderate: '#FACC15', // Yellow
+  poor: '#FB923C', // Orange
+  veryPoor: '#EF4444', // Red
+  hazardous: '#A855F7', // Purple
+};
 
 // Base Colors
 export const COLORS = {
@@ -42,42 +43,3 @@ export const COLORS = {
 
 // Type for color constants
 export type ColorKey = keyof typeof COLORS;
-
-// Helper function to get color value
-export const getColor = (key: ColorKey): string => COLORS[key];
-
-// Air Quality Index color mapping based on pollutant type and value
-export const getAQIColor = (value: number, pollutionType: PollutionType): string => {
-  switch (pollutionType) {
-    case 'pm25':
-      if (value < 12) return COLORS.AQI_GOOD;
-      if (value < 35.5) return COLORS.AQI_MODERATE;
-      if (value < 55.5) return COLORS.AQI_SENSITIVE;
-      if (value < 150.5) return COLORS.AQI_UNHEALTHY;
-      if (value < 250.5) return COLORS.AQI_VERY_UNHEALTHY;
-      return COLORS.AQI_HAZARDOUS;
-
-    case 'pm10':
-      if (value < 55) return COLORS.AQI_GOOD;
-      if (value < 155) return COLORS.AQI_MODERATE;
-      if (value < 255) return COLORS.AQI_SENSITIVE;
-      if (value < 355) return COLORS.AQI_UNHEALTHY;
-      if (value < 425) return COLORS.AQI_VERY_UNHEALTHY;
-      return COLORS.AQI_HAZARDOUS;
-
-    case 'no2':
-      if (value < 54) return COLORS.AQI_GOOD;
-      if (value < 101) return COLORS.AQI_MODERATE;
-      if (value < 361) return COLORS.AQI_SENSITIVE;
-      if (value < 650) return COLORS.AQI_UNHEALTHY;
-      if (value < 1250) return COLORS.AQI_VERY_UNHEALTHY;
-      return COLORS.AQI_HAZARDOUS;
-
-    case 'o3':
-      if (value < 55) return COLORS.AQI_GOOD;
-      return COLORS.DEFAULT_PROVINCE;
-
-    default:
-      return COLORS.DEFAULT_PROVINCE;
-  }
-};

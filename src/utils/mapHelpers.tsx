@@ -1,4 +1,4 @@
-import { COLORS, getAQIColor } from '@/styles/themes/colors';
+import { ColorKey, COLORS } from '@/styles/themes/colors';
 import { AQI_RATINGS, POLLUTION_TYPE_THRESHOLDS } from '@/constants/aqi';
 import { PollutionDataPoint, PollutionType } from '@/types/3dVisualization';
 
@@ -82,6 +82,42 @@ export const getAQIRating = (value: number, pollutionType: PollutionType): strin
   return AQI_RATINGS.HAZARDOUS;
 };
 
+// Air Quality Index color mapping based on pollutant type and value
+export const getAQIColor = (value: number, pollutionType: PollutionType): string => {
+  switch (pollutionType) {
+    case 'pm25':
+      if (value < 12) return COLORS.AQI_GOOD;
+      if (value < 35.5) return COLORS.AQI_MODERATE;
+      if (value < 55.5) return COLORS.AQI_SENSITIVE;
+      if (value < 150.5) return COLORS.AQI_UNHEALTHY;
+      if (value < 250.5) return COLORS.AQI_VERY_UNHEALTHY;
+      return COLORS.AQI_HAZARDOUS;
+
+    case 'pm10':
+      if (value < 55) return COLORS.AQI_GOOD;
+      if (value < 155) return COLORS.AQI_MODERATE;
+      if (value < 255) return COLORS.AQI_SENSITIVE;
+      if (value < 355) return COLORS.AQI_UNHEALTHY;
+      if (value < 425) return COLORS.AQI_VERY_UNHEALTHY;
+      return COLORS.AQI_HAZARDOUS;
+
+    case 'no2':
+      if (value < 54) return COLORS.AQI_GOOD;
+      if (value < 101) return COLORS.AQI_MODERATE;
+      if (value < 361) return COLORS.AQI_SENSITIVE;
+      if (value < 650) return COLORS.AQI_UNHEALTHY;
+      if (value < 1250) return COLORS.AQI_VERY_UNHEALTHY;
+      return COLORS.AQI_HAZARDOUS;
+
+    case 'o3':
+      if (value < 55) return COLORS.AQI_GOOD;
+      return COLORS.DEFAULT_PROVINCE;
+
+    default:
+      return COLORS.DEFAULT_PROVINCE;
+  }
+};
+
 /**
  * Get CSS classes for a pollution value based on its AQI rating
  * @param value Pollutant concentration
@@ -127,3 +163,22 @@ export const isCityActive = (locationName: string, activeMesh: string | null): b
 export const getButtonStyleClass = (isActive: boolean): string => {
   return isActive ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-700 hover:bg-gray-300';
 };
+
+// Helper function to get pollutant name
+export const getPollutantName = (pollutionType: string): string => {
+  switch (pollutionType) {
+    case 'pm25':
+      return 'PM2.5 - Fine Particles';
+    case 'pm10':
+      return 'PM10 - Coarse Particles';
+    case 'no2':
+      return 'NO₂ - Nitrogen Dioxide';
+    case 'o3':
+      return 'O₃ - Ozone';
+    default:
+      return pollutionType.toUpperCase();
+  }
+};
+
+// Helper function to get color value
+export const getColor = (key: ColorKey): string => COLORS[key];
