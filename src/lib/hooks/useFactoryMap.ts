@@ -1,12 +1,14 @@
 import { useRef, useState, useCallback } from 'react';
 import { env } from '@/lib/env';
-import { IFactoryItem, MAPBOX_STYLES } from '@/types/MapBoxTypes';
+import { IFactoryItem } from '@/types/MapBoxTypes';
 import { ScenegraphLayer } from '@deck.gl/mesh-layers';
 import { ListFactoryModels } from '@/lib/db/factoryData';
 import { AmbientLight, LightingEffect, _SunLight as SunLight } from '@deck.gl/core';
 import mapboxgl from 'mapbox-gl';
 import MapboxGeocoder from '@mapbox/mapbox-gl-geocoder';
-import { INITIAL_VIEW_STATE } from '@/constants/factory';
+import { INITIAL_VIEW_STATE, PREDEFINED_VIEWS } from '@/constants/factory';
+import { VIEW_TYPES, ViewType } from '@/constants/viewTypes';
+import { MAP_STYLE_TYPES, MapStyleType, MAPBOX_STYLES } from '@/constants/mapStyles';
 
 export interface ViewState {
   longitude: number;
@@ -27,12 +29,13 @@ interface UseFactoryMapReturn {
   modelLoaded: boolean;
   hoverInfo: HoverInfo | null;
   viewState: ViewState;
-  currentMapStyle: keyof typeof MAPBOX_STYLES;
+  currentMapStyle: MapStyleType;
+  currentView: ViewType | undefined;
   lightingEffect: LightingEffect;
   handleMapLoad: (event: { target: mapboxgl.Map }) => void;
   handleViewStateChange: (newViewState: ViewState) => void;
-  setProgrammaticViewChange: (view: Partial<ViewState>) => void;
-  changeMapStyle: (styleKey: keyof typeof MAPBOX_STYLES) => void;
+  setProgrammaticViewChange: (view: Partial<ViewState>, viewType?: ViewType) => void;
+  changeMapStyle: (styleKey: MapStyleType) => void;
   setupGeocoder: (map: mapboxgl.Map) => void;
   setup3DBuildings: (map: mapboxgl.Map) => void;
   createBuildingLayers: () => ScenegraphLayer<IFactoryItem>[];
@@ -42,8 +45,12 @@ export const useFactoryMap = (): UseFactoryMapReturn => {
   const mapRef = useRef<mapboxgl.Map | null>(null);
   const [modelLoaded, setModelLoaded] = useState<boolean>(false);
   const [hoverInfo, setHoverInfo] = useState<HoverInfo | null>(null);
-  const [viewState, setViewState] = useState<ViewState>(INITIAL_VIEW_STATE);
-  const [currentMapStyle, setCurrentMapStyle] = useState<keyof typeof MAPBOX_STYLES>('STREETS');
+  const [viewState, setViewState] = useState<ViewState>({
+    ...INITIAL_VIEW_STATE,
+    ...PREDEFINED_VIEWS[VIEW_TYPES.BIRD],
+  });
+  const [currentMapStyle, setCurrentMapStyle] = useState<MapStyleType>(MAP_STYLE_TYPES.STREETS);
+  const [currentView, setCurrentView] = useState<ViewType>(VIEW_TYPES.BIRD);
 
   const sun = new SunLight({
     timestamp: Date.now(),
@@ -68,7 +75,7 @@ export const useFactoryMap = (): UseFactoryMapReturn => {
   }, []);
 
   const setProgrammaticViewChange = useCallback(
-    (view: Partial<ViewState>) => {
+    (view: Partial<ViewState>, viewType?: ViewType) => {
       if (mapRef.current) {
         mapRef.current.easeTo({
           pitch: view.pitch ?? viewState.pitch,
@@ -76,12 +83,24 @@ export const useFactoryMap = (): UseFactoryMapReturn => {
           zoom: view.zoom ?? viewState.zoom,
           duration: 1000,
         });
+
+        if (viewType) {
+          setCurrentView(viewType);
+        } else if (view === PREDEFINED_VIEWS[VIEW_TYPES.TOP_DOWN]) {
+          setCurrentView(VIEW_TYPES.TOP_DOWN);
+        } else if (view === PREDEFINED_VIEWS[VIEW_TYPES.ISOMETRIC]) {
+          setCurrentView(VIEW_TYPES.ISOMETRIC);
+        } else if (view === PREDEFINED_VIEWS[VIEW_TYPES.SIDE]) {
+          setCurrentView(VIEW_TYPES.SIDE);
+        } else if (view === PREDEFINED_VIEWS[VIEW_TYPES.BIRD]) {
+          setCurrentView(VIEW_TYPES.BIRD);
+        }
       }
     },
     [viewState]
   );
 
-  const changeMapStyle = useCallback((styleKey: keyof typeof MAPBOX_STYLES) => {
+  const changeMapStyle = useCallback((styleKey: MapStyleType) => {
     setCurrentMapStyle(styleKey);
     if (mapRef.current) {
       mapRef.current.setStyle(MAPBOX_STYLES[styleKey]);
@@ -150,10 +169,6 @@ export const useFactoryMap = (): UseFactoryMapReturn => {
           getOrientation: [0, 0, 90],
           sizeScale: (factory.scale ?? 1) * 0.2,
           pickable: true,
-          onClick: () => {
-            console.log('Clicked factory:', factory.name);
-            console.log('Clicked factory:', factory);
-          },
           onHover: info => {
             if (info.object) {
               setHoverInfo({
@@ -175,6 +190,7 @@ export const useFactoryMap = (): UseFactoryMapReturn => {
     hoverInfo,
     viewState,
     currentMapStyle,
+    currentView,
     lightingEffect,
     handleMapLoad,
     handleViewStateChange,
