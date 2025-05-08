@@ -1,6 +1,6 @@
 import { create } from 'zustand';
-import { PollutionType } from './pollutionDataStore';
 import { COLORS } from '@/styles/themes/colors';
+import { PollutionType } from '@/types/3dVisualization';
 
 export interface Filter {
   label: string;
