@@ -11,7 +11,7 @@ const Header = () => {
 
   return (
     <header className="sticky top-0 z-10 w-full bg-background shadow-sm px-8 py-4 z-100">
-      <div className="w-full flex items-center justify-between p-4">
+      <div className="w-full flex items-center justify-between">
         <div className="flex items-center">
           <Link to="/" className="text-lg font-bold text-foreground">
             Air Pollution

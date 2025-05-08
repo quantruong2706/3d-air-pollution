@@ -1,7 +1,7 @@
 import React from 'react';
 import Map, { GeolocateControl, NavigationControl } from 'react-map-gl/mapbox';
 import { env } from '@/lib/env';
-import { MAPBOX_STYLES } from '@/types/MapBoxTypes';
+import { MAPBOX_STYLES } from '@/constants/mapStyles';
 import DeckGLOverlay from '@/components/features/factory-map/DeckGLOverlay';
 import FactoryInformationPopup from '@/components/features/factory-map/FactoryInformationPopup';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
@@ -15,6 +15,7 @@ const MapBoxFactory: React.FC = () => {
     modelLoaded,
     hoverInfo,
     currentMapStyle,
+    currentView,
     lightingEffect,
     handleMapLoad,
     handleViewStateChange,
@@ -26,8 +27,11 @@ const MapBoxFactory: React.FC = () => {
   } = useFactoryMap();
 
   return (
-    <div className="h-[88vh] w-full relative">
-      <ViewingAnglesMap onChangeView={setProgrammaticViewChange} />
+    <div className="h-[92vh] w-full relative">
+      <ViewingAnglesMap
+        onChangeView={(view, viewType) => setProgrammaticViewChange(view, viewType)}
+        currentView={currentView}
+      />
 
       <Map
         mapboxAccessToken={env.MAP_BOX_TOKEN}
