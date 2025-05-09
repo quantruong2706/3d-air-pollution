@@ -1,8 +1,9 @@
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { usePollutionStore } from '@/stores/pollutionDataStore';
 import { useAnimateIn } from '@/lib/hooks/useAnimateIn';
-import { pollutionTypes } from '@/constants/aqi';
+import { AQI_LEVELS, pollutionTypes } from '@/constants/aqi';
 import { PollutionType } from '@/types/3dVisualization';
+import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 
 const AirPollutionTypeFilter = (): JSX.Element => {
   const activeLayer = usePollutionStore(state => state.activeLayer);
@@ -24,8 +25,29 @@ const AirPollutionTypeFilter = (): JSX.Element => {
       className="absolute top-0 left-1/2 w-[350px] z-10 mt-4 opacity-80"
       style={animationStyles}
     >
-      <CardHeader className="flex flex-col items-center">
-        <CardTitle>AIR POLLUTION</CardTitle>
+      <CardHeader>
+        <div className="text-sm font-medium mb-2">Air Quality Index (AQI) Levels:</div>
+        <div className="relative h-8 rounded-md overflow-hidden">
+          <TooltipProvider>
+            <div
+              className="flex h-full w-full"
+              style={{
+                background: `linear-gradient(to right, ${AQI_LEVELS.map(level => level.color).join(', ')})`,
+              }}
+            >
+              {AQI_LEVELS.map(level => (
+                <Tooltip key={level.key}>
+                  <TooltipTrigger asChild>
+                    <div className="h-full flex-1 bg-transparent cursor-pointer transition-opacity hover:opacity-80" />
+                  </TooltipTrigger>
+                  <TooltipContent side="top">
+                    <span className="font-medium">{level.label}</span>
+                  </TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+          </TooltipProvider>
+        </div>
       </CardHeader>
       <CardContent>
         <div className="grid grid-cols-4 gap-2">

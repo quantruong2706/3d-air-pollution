@@ -11,7 +11,6 @@ import {
   MapPin,
   Info,
   CloudFog,
-  Gauge,
   Users,
   Car,
   Building,
@@ -22,10 +21,8 @@ import {
   Clock,
 } from 'lucide-react';
 import { useAnimateIn } from '@/lib/hooks/useAnimateIn';
-import PollutionVisualizationScene from '@/components/features/dashboard/PollutionVisualizationScene';
 import PieChart3D from '@/components/features/dashboard/PieChart3D';
 import BarChart3D from '@/components/features/dashboard/BarChart3D';
-import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import DashboardLayout from '@/components/features/dashboard/DashboardLayout';
 import DashboardHeader from '@/components/features/dashboard/DashboardHeader';
 import DashboardCard from '@/components/features/dashboard/DashboardCard';
@@ -397,57 +394,6 @@ const Dashboard: React.FC = () => {
           </div>
         </div>
 
-        {/* 3D Visualization Section */}
-        <div className="mb-6">
-          <DashboardCard
-            title="Real-time Pollution Visualization"
-            icon={<Gauge size={18} />}
-            accentColor="purple"
-            headerRightContent={
-              <TooltipProvider>
-                <Tooltip>
-                  <TooltipTrigger className="p-1 hover:bg-gray-100 dark:hover:bg-gray-700 rounded">
-                    <Info size={16} className="text-gray-400" />
-                  </TooltipTrigger>
-                  <TooltipContent>
-                    <p className="max-w-xs">
-                      Interactive 3D visualization showing current pollutant levels.
-                    </p>
-                  </TooltipContent>
-                </Tooltip>
-              </TooltipProvider>
-            }
-          >
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <PollutionVisualizationScene
-                pollutionType="pm25"
-                pollutionValue={stats.pm25.avg}
-                quality={getAirQualityStatus(stats.pm25.avg, 'pm25').qualityLevel}
-                height={240}
-              />
-              <PollutionVisualizationScene
-                pollutionType="pm10"
-                pollutionValue={stats.pm10.avg}
-                quality={getAirQualityStatus(stats.pm10.avg, 'pm10').qualityLevel}
-                height={240}
-              />
-              <PollutionVisualizationScene
-                pollutionType="no2"
-                pollutionValue={stats.no2.avg}
-                quality={getAirQualityStatus(stats.no2.avg, 'no2').qualityLevel}
-                height={240}
-              />
-              <PollutionVisualizationScene
-                pollutionType="o3"
-                pollutionValue={stats.o3.avg}
-                quality={getAirQualityStatus(stats.o3.avg, 'o3').qualityLevel}
-                height={240}
-              />
-            </div>
-          </DashboardCard>
-        </div>
-
-        {/* Advanced Analytics Section */}
         <div className="mb-6 grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Pie Chart Card */}
           <DashboardCard

@@ -1,4 +1,6 @@
+import { COLORS } from '@/styles/themes/colors';
 import { PollutionType } from '@/types/3dVisualization';
+import { AirQualityLevel } from '@/types/CitiesTableTypes';
 
 // AQI Rating Text Values
 export const AQI_RATINGS = {
@@ -73,4 +75,13 @@ export const pollutionTypes: readonly PollutionTypeOption[] = [
   { value: 'pm10', label: 'PM10' },
   { value: 'no2', label: 'NO₂' },
   { value: 'o3', label: 'O₃' },
+];
+
+export const AQI_LEVELS: readonly AirQualityLevel[] = [
+  { key: 'AQI_GOOD', label: 'Good', color: COLORS.AQI_GOOD },
+  { key: 'AQI_MODERATE', label: 'Moderate', color: COLORS.AQI_MODERATE },
+  { key: 'AQI_SENSITIVE', label: 'Unhealthy for Sensitive Groups', color: COLORS.AQI_SENSITIVE },
+  { key: 'AQI_UNHEALTHY', label: 'Unhealthy', color: COLORS.AQI_UNHEALTHY },
+  { key: 'AQI_VERY_UNHEALTHY', label: 'Very Unhealthy', color: COLORS.AQI_VERY_UNHEALTHY },
+  { key: 'AQI_HAZARDOUS', label: 'Hazardous', color: COLORS.AQI_HAZARDOUS },
 ];

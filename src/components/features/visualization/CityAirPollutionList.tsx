@@ -1,14 +1,11 @@
-import { useEffect, useCallback, useState } from 'react';
+import { useEffect, useCallback } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { usePollutionStore } from '@/stores/pollutionDataStore';
 import { useAnimateIn } from '@/lib/hooks/useAnimateIn';
-import { CitiesTable } from './CitiesTable';
-import { SortOption } from '@/types/CitiesTableTypes';
+import { CitiesTable } from '../../common/CitiesTable';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
 
 const CityAirPollutionList: React.FC = () => {
-  const [sortBy, setSortBy] = useState<SortOption>('name');
-
   const pollutionData = usePollutionStore(state => state.pollutionData);
   const fetchPollutionData = usePollutionStore(state => state.fetchPollutionData);
   const isLoading = usePollutionStore(state => state.isLoading);
@@ -31,10 +28,6 @@ const CityAirPollutionList: React.FC = () => {
     handleFetchData();
   }, [handleFetchData]);
 
-  const handleToggleSort = useCallback(() => {
-    setSortBy(prevSort => (prevSort === 'name' ? 'id' : 'name'));
-  }, []);
-
   return (
     <Card
       className="absolute top-0 right-0 w-[400px] z-10 mt-4 mr-4 overflow-hidden max-h-[80vh]"
@@ -51,12 +44,7 @@ const CityAirPollutionList: React.FC = () => {
         ) : error ? (
           <div className="p-4 text-center text-red-500">Error loading data: {error}</div>
         ) : (
-          <CitiesTable
-            data={pollutionData}
-            activeLayer={activeLayer}
-            sortBy={sortBy}
-            onToggleSort={handleToggleSort}
-          />
+          <CitiesTable data={pollutionData} activeLayer={activeLayer} />
         )}
       </CardContent>
     </Card>

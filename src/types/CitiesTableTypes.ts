@@ -18,8 +18,6 @@ export interface TableHeaderProps {
 export interface CitiesTableProps {
   readonly data: ReadonlyArray<PollutionDataPoint>;
   readonly activeLayer: PollutionType;
-  readonly sortBy: SortOption;
-  readonly onToggleSort: () => void;
 }
 
 /**
@@ -28,4 +26,11 @@ export interface CitiesTableProps {
 export interface TableBodyProps {
   readonly cities: ReadonlyArray<PollutionDataPoint>;
   readonly activeLayer: PollutionType;
+  readonly isTopCities?: boolean;
+}
+
+export interface AirQualityLevel {
+  readonly key: string;
+  readonly label: string;
+  readonly color: string;
 }

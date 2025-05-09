@@ -1,5 +1,5 @@
 import React, { ReactNode } from 'react';
-import { LayoutDashboard, Map, BarChart3, Settings, Info, LogOut, Menu, X } from 'lucide-react';
+import { LayoutDashboard, Map, BarChart3, Settings, Info, Menu, X } from 'lucide-react';
 import ThemeToggle from '@/components/common/ThemeToggle';
 import { useState } from 'react';
 
@@ -20,7 +20,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label, isActive = false, onClic
       <button
         type="button"
         onClick={onClick}
-        className={`flex items-center gap-3 w-full px-3 py-2 rounded-lg transition-colors ${
+        className={`flex items-center gap-3 w-full px-3 py-2 rounded-lg transition-colors cursor-default ${
           isActive
             ? 'bg-primary text-primary-foreground font-medium'
             : 'hover:bg-primary/10 text-gray-600 dark:text-gray-300'
@@ -42,7 +42,7 @@ const DASHBOARD_NAV_ITEMS = [
 ];
 
 const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
-  const [activeSection, setActiveSection] = useState<string>('overview');
+  const activeSection = 'overview';
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
 
   // Toggle sidebar for mobile view
@@ -77,7 +77,7 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
                   icon={item.icon}
                   label={!sidebarOpen && window.innerWidth >= 1024 ? '' : item.label}
                   isActive={activeSection === item.id}
-                  onClick={() => setActiveSection(item.id)}
+                  // onClick={() => setActiveSection(item.id)}
                 />
               ))}
             </ul>
@@ -85,23 +85,13 @@ const DashboardLayout: React.FC<DashboardLayoutProps> = ({ children }) => {
 
           <div className="mt-auto">
             {/* Settings and account controls */}
-            <div className="border-t border-gray-200 dark:border-gray-800 mt-6 pt-6 space-y-2">
+            <div className="border-t border-gray-200 dark:border-gray-800 mt-6 pt-2 space-y-2">
               <div className="flex items-center justify-between px-3">
                 <span className={`text-sm text-gray-500 ${!sidebarOpen && 'lg:hidden'}`}>
                   Theme
                 </span>
                 <ThemeToggle />
               </div>
-
-              <button
-                type="button"
-                className={
-                  'text-primary flex items-center gap-3 w-full px-3 py-2 rounded-lg transition-colors'
-                }
-              >
-                <LogOut size={18} />
-                <span>{!sidebarOpen && window.innerWidth >= 1024 ? '' : 'Sign Out'}</span>
-              </button>
             </div>
           </div>
         </div>

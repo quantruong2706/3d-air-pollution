@@ -1,14 +1,20 @@
 import { useCallback, memo } from 'react';
-import { getPollutionColorClass, getAQIRating, isCityActive } from '@/utils/mapHelpers';
+import {
+  getPollutionColorClass,
+  getAQIRating,
+  isCityActive,
+  formatProvinceName,
+} from '@/utils/mapHelpers';
 import useMapStore from '@/stores/mapStore';
 import { PollutionDataPoint, PollutionType } from '@/types/3dVisualization';
 
 interface CityTableRowProps {
+  readonly idCity: string | number;
   readonly city: PollutionDataPoint;
   readonly activeLayer: PollutionType;
 }
 
-const CityTableRow: React.FC<CityTableRowProps> = memo(({ city, activeLayer }) => {
+const CityTableRow: React.FC<CityTableRowProps> = memo(({ idCity, city, activeLayer }) => {
   const setCameraPosition = useMapStore(state => state.setCameraPosition);
   const activeMesh = useMapStore(state => state.activeMesh);
 
@@ -18,7 +24,7 @@ const CityTableRow: React.FC<CityTableRowProps> = memo(({ city, activeLayer }) =
     });
   }, [city.location.key, setCameraPosition]);
 
-  const isActive = isCityActive(city.location.name, activeMesh);
+  const isActive = isCityActive(city.location.name, formatProvinceName(activeMesh ?? ''));
   const pollutionValue = city.readings[activeLayer];
   const ratingText = getAQIRating(pollutionValue, activeLayer);
   const colorClass = getPollutionColorClass(pollutionValue, activeLayer);
@@ -32,7 +38,7 @@ const CityTableRow: React.FC<CityTableRowProps> = memo(({ city, activeLayer }) =
       onClick={handleCityClick}
       title={`Click to focus on ${city.location.name}`}
     >
-      <td className="px-2 py-2">{city.id}</td>
+      <td className="px-2 py-2">{idCity}</td>
       <td className="px-2 py-2 font-medium">{city.location.name}</td>
       <td className="px-2 py-2">
         <span
