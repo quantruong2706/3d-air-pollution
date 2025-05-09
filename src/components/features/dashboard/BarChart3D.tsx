@@ -167,7 +167,7 @@ const BarChart3D: React.FC<BarChartProps> = ({
   title = 'Bar Chart',
   height = 300,
   maxValue,
-  animated = true,
+  animated = false,
 }) => {
   // Calculate chart dimensions and bar placements
   const { chartSize, normalizedData } = useMemo(() => {

@@ -73,6 +73,13 @@ const createPieSegments = (
       depth / 2
     );
 
+    // Position for exterior face label
+    const faceLabelPosition = new THREE.Vector3(
+      labelDistance * Math.cos(labelAngle),
+      labelDistance * Math.sin(labelAngle),
+      depth + 0.01 // Slightly in front of the face
+    );
+
     // Calculate percentage for the label
     const percentage = ((point.value / total) * 100).toFixed(1);
 
@@ -96,6 +103,21 @@ const createPieSegments = (
             {`${percentage}%`}
           </Text>
         )}
+
+        {/* Add label on exterior face if segment is large enough */}
+        {arcAngle > 0.2 && (
+          <Text
+            position={faceLabelPosition}
+            fontSize={0.3}
+            color="#FFFFFF"
+            anchorX="center"
+            anchorY="middle"
+            renderOrder={1} // Ensure it renders on top
+            material-depthTest={false} // Make sure it's always visible
+          >
+            {`${percentage}%`}
+          </Text>
+        )}
       </group>
     );
 
@@ -115,7 +137,7 @@ const PieChart3D: React.FC<PieChartProps> = ({
   height = 300,
   radius = 2,
   depth = 0.5,
-  rotation = true,
+  rotation = false,
 }) => {
   if (!data?.length) {
     return <div>No data available</div>;
@@ -153,7 +175,7 @@ const PieChart3D: React.FC<PieChartProps> = ({
           {data.map((item, i) => (
             <div key={`legend-${i}`} className="flex items-center text-xs">
               <div className="w-3 h-3 mr-1" style={{ backgroundColor: item.color }} />
-              <span>{item.label}</span>
+              <p>{item.label}</p>
             </div>
           ))}
         </div>
